@@ -6,6 +6,10 @@ const app = express();
 
 app.use(express.static(__dirname + "/public"));
 
+app.get("/", (req, res) => {
+    res.send("Probando conexión...");
+});
+
 app.get("/the-office.gif", async (req, res) => {
     console.log("alguien hizo la solicitud");
 
